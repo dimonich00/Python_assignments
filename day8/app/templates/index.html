@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Calculate the Area</h1>
+    <form id="figure-form">
+        <label for="figure">Choose a figure:</label>
+        <select id="figure" name="figure" hx-get="/render-form" hx-target="#dynamic-form" hx-swap="innerHTML">
+            <option value="">Select a figure</option>
+            <option value="circle">Circle</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="triangle">Triangle</option>
+        </select>
+    </form>
+    <div id="dynamic-form"></div>
+    <div id="result"></div>
+</body>
+</html>
